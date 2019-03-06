@@ -6,13 +6,17 @@ See more at https://refactoring.guru/design-patterns/behavioral-patterns
 
 ## 1. Chain of Responsibility
 
-[See more](https://refactoring.guru/design-patterns/chain-of-responsibility)
+[Read the post](https://refactoring.guru/design-patterns/chain-of-responsibility)
 
-#### Problem
+Run example at MainActivity:
 
-![image-20190306165418786](./img/image-20190306165418786.png)
-
-#### Solution
-
-![image-20190306165039321](./img/image-20190306165039321.png)
+```kotlin
+// Admin account
+Demo_CoR().runDemo("admin@example.com", "admin_pass")
+// User account
+Demo_CoR().runDemo("user@example.com", "user_pass")
+// Invalid account
+Demo_CoR().runDemo("abc@example.com", "user_pass")
+Demo_CoR().runDemo("admin@example.com", "123")
+```
 

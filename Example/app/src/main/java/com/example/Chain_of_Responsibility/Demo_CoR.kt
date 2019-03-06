@@ -24,15 +24,14 @@ public class Demo_CoR {
         // All checks are linked. Client can build various chains using the same
         // components.
         val middleware = ThrottlingMiddleware(2)
-        middleware.linkWith(UserExistsMiddleware(server!!))
-            .linkWith(RoleCheckMiddleware())
+        middleware.linkWith(UserExistsMiddleware(server!!)).linkWith(RoleCheckMiddleware())
 
         // Server gets a chain from client code.
         server!!.setMiddleware(middleware)
     }
 
     fun runDemo(email: String, password: String) {
-        Log.i(TAG, "Run demo")
+        Log.i(TAG, "Run demo for $email - $password")
         init()
         val success = server!!.logIn(email, password)
         Log.i(TAG, "Success: $success")

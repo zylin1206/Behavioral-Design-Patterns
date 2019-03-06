@@ -14,8 +14,12 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         // Run test
+        // Admin account
         Demo_CoR().runDemo("admin@example.com", "admin_pass")
+        // User account
         Demo_CoR().runDemo("user@example.com", "user_pass")
+        // Invalid account
         Demo_CoR().runDemo("abc@example.com", "user_pass")
+        Demo_CoR().runDemo("admin@example.com", "123")
     }
 }
