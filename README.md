@@ -20,3 +20,23 @@ Demo_CoR().runDemo("abc@example.com", "user_pass")
 Demo_CoR().runDemo("admin@example.com", "123")
 ```
 
+
+
+## 2. Command
+
+[Read the post](https://refactoring.guru/design-patterns/command)
+
+Run example at MainActivity:
+
+```kotlin
+// Command
+val intent = Intent(this, Editor::class.java)
+startActivity(intent)
+```
+
+
+
+## 3. Iterator
+
+[Read the post](https://refactoring.guru/design-patterns/iterator)
+
